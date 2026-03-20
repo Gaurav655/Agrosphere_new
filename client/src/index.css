@@ -1,0 +1,152 @@
+:root {
+  /* Color Palette - Agricultural Theme */
+  --color-primary: #2d6a4f; /* Deep Farm Green */
+  --color-primary-light: #40916c;
+  --color-primary-dark: #1b4332;
+  --color-secondary: #f4a261; /* Warm Sun/Harvest Orange */
+  --color-background: #fbf9f6; /* Off-white earthy */
+  --color-surface: #ffffff;
+  --color-text-main: #2b2d42;
+  --color-text-muted: #6c757d;
+  --color-border: #e9ecef;
+  --color-success: #2a9d8f;
+  --color-danger: #e63946;
+  
+  /* Typography */
+  --font-family: 'Inter', system-ui, sans-serif;
+  
+  /* Styling Tokens for "Simple but Premium" feel */
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px; /* Large radius for softer friendly look */
+  --border-radius-lg: 24px;
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Components - Designed for Ease of Use (Farmers) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Large, easy to tap buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(45, 106, 79, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary-light);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary-light);
+  color: white;
+}
+
+/* Cards with large touch targets */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid var(--color-border);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Form Inputs - Large and clear */
+input, select, textarea {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  font-size: 1.1rem;
+  font-family: var(--font-family);
+  transition: var(--transition);
+  background-color: var(--color-surface);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.1);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-text-main);
+  font-size: 1.1rem;
+}
+
+/* Simple typography */
+h1, h2, h3, h4 {
+  color: var(--color-text-main);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+h2 { font-size: 2rem; margin-bottom: 1rem; }
+h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+p { margin-bottom: 1rem; font-size: 1.1rem; color: var(--color-text-muted); }
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mt-2 { margin-top: 1rem; }
+.mt-4 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 2rem; }
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 1rem; }
+.gap-4 { gap: 2rem; }
