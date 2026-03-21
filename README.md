@@ -1,5 +1,7 @@
 # AgroSphere - Farmer Equipment Rental Platform
 
+LIVE DEMO https://agrosphere-farmer.netlify.app/
+
 AgroSphere is a MERN stack application designed to help small farmers rent expensive agricultural equipment (like tractors and harvesters) from equipment owners in their local area.
 
 ## Features
